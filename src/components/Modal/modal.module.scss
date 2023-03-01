@@ -1,0 +1,40 @@
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 111;
+  background: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+.modalContent {
+  position: relative;
+  margin: auto;
+  padding: 15px;
+  background: var(--module-background-color);
+  border-radius: 15px;
+  min-width: 250px;
+}
+
+.modalEnter {
+  opacity: 0;
+}
+
+.modalEnterActive {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.modalExit {
+  opacity: 1;
+}
+
+.modalExitActive {
+  opacity: 0;
+  transition: opacity 500ms;
+}

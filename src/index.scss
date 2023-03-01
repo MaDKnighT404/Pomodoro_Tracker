@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+html {
+  --main-text-color: #555;
+
+  --link-color: #ff0000;
+  --link-hover-color: #ff0000a6;
+  --button-color: #d22d2d;
+  --button-hover-color: #ff0000c5;
+  --button-text-color: #ffffff;
+
+  --input-bg-color: white;
+
+  --background-main-color: #fbf7f4;
+  --border-color: #dfdbd8;
+  --module-background-color: #ffffff;
+  --loader-bg-color: #ffffff;
+  --loader-color: rgb(156, 7, 7);
+  --error-color: rgb(141, 50, 50);
+
+  --fade-text-color: gray;
+  --accent-text-color: #d22d2d;
+
+  --timer-icons-color: #3a3a3a;
+
+  --header-border-color: rgb(213 213 213);
+  --header-bg-color: white;
+
+  --footer-github-icon-color: #7e0000;
+
+  --hover-box-shadow: 0px 8px 17px 4px rgb(145 145 145 / 20%);
+
+  font-size: 16px;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 14px;
+  }
+}
+
+html[data-theme='dark'] {
+  --main-text-color: #c4c4c4;
+
+  --link-color: #ff2929;
+  --link-hover-color: #ff2929a6;
+  --button-color: #d22d2d;
+  --button-hover-color: #ff0000c5;
+  --button-text-color: #ffffff;
+
+  --input-bg-color: #11131e;
+
+  --background-main-color: #494a58;
+  --border-color: #2a3542;
+  --module-background-color: #1a1c26;
+  --loader-bg-color: #ffffff;
+  --loader-color: rgb(156, 7, 7);
+  --error-color: rgb(141, 50, 50);
+
+  --fade-text-color: gray;
+  --accent-text-color: #d22d2d;
+
+  --timer-icons-color: white;
+
+  --header-border-color: rgb(56, 56, 56);
+  --header-bg-color: #1a1c26;
+
+  --footer-github-icon-color: white;
+
+  --hover-box-shadow: 0px 11px 16px 4px rgb(0 0 0 / 23%);
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  background-color: var(--background-main-color);
+  color: var(--main-text-color);
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}

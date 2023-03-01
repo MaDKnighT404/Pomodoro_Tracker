@@ -1,0 +1,94 @@
+.container {
+  width: 320px;
+}
+
+.header {
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba($color: grey, $alpha: 0.8);
+}
+
+.title {
+  color: var(--main-text-color);
+  text-transform: uppercase;
+}
+
+.label {
+  padding-right: 0.5em;
+  color: var(--main-text-color);
+  font-weight: bold;
+}
+
+.row {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba($color: grey, $alpha: 0.8);
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.rowFlexColumn {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.timeSettings {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.timeSettingsItem {
+  width: 28%;
+}
+
+.numberLabel {
+  margin-bottom: 5px;
+  color: var(--main-text-color);
+}
+
+.numberContainer {
+  width: 4rem;
+}
+
+.closeButton {
+  display: inline-flex;
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: rgba($color: red, $alpha: 0.8);
+  }
+}
+
+.selectSoundContainer {
+  width: 8rem;
+}
+
+.selectSound {
+  width: 100%;
+  padding: 0.625rem 0.325rem;
+  color: var(--main-text-color);
+  font-size: 1rem;
+  background-color: var(--module-background-color);
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    border-color: #555;
+  }
+}

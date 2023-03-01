@@ -1,0 +1,130 @@
+.container {
+  width: 360px;
+  padding: 15px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--module-background-color);
+  border-radius: 5px;
+  position: relative;
+}
+
+.dial {
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  width: 100px;
+}
+
+.circleStatic {
+  color: rgba($color: var(--timer-icons-color), $alpha: 0.5);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+}
+
+.circleActive {
+  fill: none;
+  stroke: red;
+  stroke-width: 4;
+  transform-origin: center;
+  transform: rotate(-90deg);
+
+  &Break {
+    stroke: #397097;
+  }
+}
+
+.time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+  user-select: none;
+}
+
+.controls {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  column-gap: 10px;
+}
+
+.timerButton,
+.settingsButton,
+.removeTaskButton {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--timer-icons-color);
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.timerButton {
+  font-size: 2rem;
+}
+
+.settingsButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1rem;
+}
+
+.removeTaskButton {
+  margin-left: 5px;
+  font-size: 14px;
+
+  :hover {
+    color: red;
+  }
+}
+
+.infoPanel {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+.instructionsPanel {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.focusInstruction {
+  color: var(--accent-text-color);
+  font-weight: 600;
+}
+
+.breakInstruction {
+  color: #397097;
+  font-weight: 600;
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+
+  & span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,20 @@
+.english,
+.russian {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: 0.25s ease-in;
+}
+
+.english {
+  background: url(../../../../public/images/UK_flag.svg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.russian {
+  background: url(../../../../public/images/russian_flag.svg) no-repeat;
+  background-size: 100% 100%;
+} 

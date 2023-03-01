@@ -1,0 +1,27 @@
+.notFoundCountaier {
+display: flex;
+justify-content: center;
+}
+
+.figure {
+  text-align: center;
+  margin-top: 70px
+}
+
+.img {
+  width: 300px;
+}
+
+.figcaption {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin: 30px 0;
+}
+
+.text {
+  font-weight: normal;
+}

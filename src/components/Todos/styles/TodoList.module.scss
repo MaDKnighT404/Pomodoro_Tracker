@@ -1,0 +1,38 @@
+.todoList {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: var(--module-background-color);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.todoWrapper {
+  border-radius: 15px;
+}
+
+.todoWrapperFiltered {
+  filter: blur(5px);
+}
+.loader {
+  border: 4px solid #000000; /* Light grey */
+  border-top: 4px solid rgb(254, 249, 126);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.5s linear infinite;
+  margin: 0 auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

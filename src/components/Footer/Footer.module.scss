@@ -1,0 +1,57 @@
+.footerWrapper {
+  border-top: 1px solid var(--header-border-color);
+  height: 70px;
+}
+
+.footerContainer {
+  max-width: 1240px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  background-color: transparent;
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
+}
+
+.teamText {
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.githubContainer {
+  display: flex;
+}
+
+.githubIcon {
+  fill: var(--footer-github-icon-color);
+}
+
+.githubLink {
+  margin: 5px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.rsSchoolLink {
+  width: 100px;
+  height: 70px;
+}
+
+.rsSchoolLogo {
+  background: url(../../../public/images/rs_school_logo.svg) no-repeat;
+  background-size: 100% 100%;
+  width: 70px;
+  height: 60px;
+  cursor: pointer;
+
+  transition: 0.2s ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+}

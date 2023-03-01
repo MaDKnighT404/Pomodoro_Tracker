@@ -1,0 +1,35 @@
+.container {
+  flex: 1 0 60%;
+  display: flex;
+  padding: 5px;
+  text-align: center;
+  background: var(--module-background-color);
+  border-radius: 5px;
+  color: var(--main-text-color);
+  align-items: baseline;
+
+  @media (max-width: 500px) {
+    flex-wrap: wrap;
+  }
+}
+
+.item {
+  flex: 1 0 25%;
+  padding: 0.5rem;
+
+  @media (max-width: 500px) {
+    flex: 1 0 50%;
+    flex-wrap: wrap;
+  }
+}
+
+.number,
+.stat {
+  font-size: 1.8rem;
+  color: var(--accent-text-color);
+}
+
+.text {
+  color: var(--main-text-color);
+  font-size: 1rem;
+}

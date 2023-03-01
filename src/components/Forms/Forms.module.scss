@@ -1,0 +1,112 @@
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  background-color: var(--module-background-color);
+
+  @media (max-width: 425px) {
+    min-width: 300px;
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form {
+  background-color: var(--module-background-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 15px;
+}
+
+.input {
+  border-radius: 10px;
+  height: 30px;
+  margin: 10px 10px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  background-color: var(--input-bg-color);
+  color: var(--main-text-color);
+}
+
+.input:focus-visible {
+  outline: 1px solid var(--button-color);
+}
+.text {
+  text-align: center;
+
+  span {
+    display: block;
+    width: 100%;
+  }
+}
+
+.submitBtn {
+  width: 50%;
+  margin: 20px 0;
+  border-radius: 5px;
+  border: none;
+  padding: 10px;
+  background-color: var(--button-color);
+  color: var(--button-text-color);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+
+  &:hover {
+    background-color: var(--button-hover-color);
+  }
+}
+
+.linkButton {
+  display: inline;
+  border: 0px;
+  background-color: transparent;
+  font-size: 1rem;
+  text-decoration: underline;
+  color: var(--link-color);
+  cursor: pointer;
+}
+
+.linkButton:hover {
+  color: var(--link-hover-color);
+}
+
+.success {
+  margin: 10px;
+}
+
+.loading {
+  margin: 10px;
+}
+
+.loader {
+  border: 4px solid var(--loader-bg-color);
+  border-top: 4px solid var(--loader-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.5s linear infinite;
+  margin: 0 auto;
+}
+
+.errorsList {
+  list-style: none;
+  margin: 10px;
+  color: var(--error-color);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

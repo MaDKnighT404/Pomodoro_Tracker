@@ -1,0 +1,41 @@
+.toggle {
+  position: relative;
+  display: inline-flex;
+  width: 4rem;
+  height: 2rem;
+  background: gray;
+  border-radius: 2rem;
+  flex-shrink: 0;
+  cursor: pointer;
+
+  input {
+    position: fixed;
+    left: -999999px;
+  }
+}
+
+.handle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(0.25rem);
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.handle svg {
+  fill: black;
+}
+
+.toggle.toggled {
+  background: rgba($color: red, $alpha: 0.8);
+
+  .handle {
+    transform: translateY(-50%) translateX(2.25rem);
+  }
+}

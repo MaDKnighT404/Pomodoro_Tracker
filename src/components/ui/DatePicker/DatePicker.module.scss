@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  position: relative;
+}
+
+.button {
+  display: inline-flex;
+  flex-shrink: 0;
+  border: none;
+  background: none;
+  color: rgba($color: red, $alpha: 0.8);
+  font-size: 1.6rem;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}
+
+.calendar {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 10px;
+  padding: 5px;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  z-index: 11;
+  overflow: hidden;
+
+  @media (max-width: 500px) {
+    margin-left: 0;
+    left: -150px;
+    top: 30px;
+  }
+}
+
+.selectedDate {
+  background-color: red !important;
+  border-radius: 50%;
+}

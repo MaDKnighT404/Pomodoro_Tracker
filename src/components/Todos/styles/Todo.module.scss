@@ -1,0 +1,205 @@
+.todoWrapper {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--module-background-color);
+  user-select: none;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.todo {
+  padding: 10px 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+
+.todoText {
+  flex-grow: 1;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.todoCompletedText {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.todoCircleIcon {
+  color: inherit;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.todoCheckedCircleIcon {
+  color: inherit;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.checkButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 1rem;
+  color: inherit;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    color: green;
+    border-color: green;
+
+    .todoCircleIcon {
+      opacity: 1;
+    }
+  }
+}
+
+.checkButtonCompleted {
+  color: green;
+  border-color: green;
+
+  &:hover {
+    color: inherit;
+    border-color: currentColor;
+
+    .todoCheckedCircleIcon {
+      opacity: 0;
+    }
+  }
+}
+
+.todoAddToTimerBtn {
+  margin-right: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: rgba($color: #555, $alpha: 0.2);
+  background: none;
+  color: #555;
+  border-radius: 50%;
+  line-height: 1;
+  font-size: 1rem;
+  transition: 0.3s ease-in;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    color: red;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.taskInTimerIcon {
+  color: red;
+  // background: rgba($color: red, $alpha: 0.2);
+}
+
+.wrapperBtn {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.editBtn {
+  margin-left: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  line-height: 1;
+  font-size: 1.25rem;
+  padding: 0.25rem 0;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: #555;
+  background: none;
+  transition: 0.3s;
+
+  &:hover {
+    background: #efefef;
+  }
+}
+
+.loader,
+.loaderDelete {
+  border: 5px solid #000000;
+  border-top: 5px solid rgb(119, 128, 192);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.5s linear infinite;
+}
+
+.loader {
+  margin: 3px 18px 0 11px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.noteContainer {
+  padding: 0 15px 15px 30px;
+}
+
+.noteText {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  background-color: #fbf7f4;
+  box-shadow: rgb(0 0 0 / 10%) 0px 1px 0px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.stats {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.date {
+  margin: 0 10px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.expiredDate {
+  margin: 0 10px;
+  font-size: 0.9rem;
+  color: red;
+  white-space: nowrap;
+}
+
+.inlineFlex {
+  display: inline-flex;
+}

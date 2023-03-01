@@ -1,0 +1,202 @@
+.container {
+  border-radius: 15px;
+}
+
+.content {
+  padding: 30px 30px 15px;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1rem 0.5rem;
+  }
+}
+
+.item {
+  margin-bottom: 15px;
+}
+
+.flexRow {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 90px;
+}
+
+.numbers {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 5px;
+}
+
+.subtitle {
+  font-weight: bold;
+}
+
+.inputText {
+  width: 100%;
+  padding: 0.625rem;
+  color: var(--main-text-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: none;
+  outline: none;
+
+  &::placeholder {
+    color: rgba($color: #555, $alpha: 0.5);
+    font-weight: normal;
+  }
+}
+
+.pomodoroControls {
+  display: flex;
+  margin-left: 10px;
+}
+
+.numberWrapper {
+  width: 5rem;
+  input {
+    font-weight: bold;
+  }
+}
+
+.numberSeparator {
+  margin: 0 10px;
+  transform: translateY(-50%);
+}
+
+.numberLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.readOnlyNumber {
+  display: block;
+  padding: 0.625rem;
+  color: rgba($color: #555, $alpha: 0.75);
+  font-size: 1rem;
+  background-color: var(--input-bg-color);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.footer {
+  display: flex;
+  padding: 15px 30px;
+  background-color: var(--input-bg-color);
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.deleteButton,
+.cancelButton,
+.saveButton {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  font-weight: bolder;
+  color: gray;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.deleteButton {
+  margin-right: auto;
+  &:hover {
+    color: red;
+  }
+}
+
+.cancelButton {
+  margin-left: auto;
+  margin-right: 10px;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.saveButton {
+  color: white;
+  background: var(--button-color);
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.numberBtn {
+  margin: 0 3px;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 2px;
+  cursor: pointer;
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(2px);
+  }
+}
+
+.loader,
+.loaderDelete {
+  border: 5px solid #000000;
+  border-top: 5px solid rgb(119, 128, 192);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 0.5s linear infinite;
+}
+
+.loader {
+  margin: 3px 18px 0 11px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.note {
+  width: 50%;
+  font-size: 1rem;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.formattedDate {
+  min-width: 90px;
+  margin: 0 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.expiredDate {
+  min-width: 90px;
+  margin: 0 5px;
+  font-size: 1rem;
+  color: red;
+  text-align: center;
+}
+
+.deadline {
+  display: flex;
+  align-items: center;
+}
