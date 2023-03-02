@@ -1,5 +1,5 @@
 # TodoList
-### deploy
+### deploy: https://plan-b-team-rs-clone.netlify.app/tasks/today
 
 ## Features:
 - Backend server : https://github.com/MaDKnighT404/RS-clone-tody-server
